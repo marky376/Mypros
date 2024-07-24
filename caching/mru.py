@@ -6,7 +6,7 @@ class MRUCache:
         self.capacity = capacity
         self.cache = []
 
-    def access(self, item):
+    def access(self, item):# Adds an item to the cache. If the cache is full, it removes the most recently used item to make space
         if item in self.cache:
             self.cache.remove(item)
         elif len(self.cache) >= self.capacity:
